@@ -15,6 +15,10 @@ public class Account {
     balance = z;
   }
 
+  public Account(String x, int y) {
+    this(x, y, 0);
+  }
+
   //-----------------------------------------------------------------
   //  Deposits the specified amount x into the account.
   //-----------------------------------------------------------------
@@ -37,7 +41,7 @@ public class Account {
   public void withdraw(double x) {
     withdraw(x, 0);
   }
-  
+
   //-----------------------------------------------------------------
   //  Returns the current balance of the account.
   //-----------------------------------------------------------------

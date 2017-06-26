@@ -3,6 +3,7 @@ public class ManageAccount {
     Account one = new Account("Donald Trump", 20230715, 400);
     Account two = new Account("Bill Gates", 31558040, 500);
     Account three = new Account("Tom Cruise", 44003050, 600);
+    Account inland = new Account("Inland Revenue", 10000000);
 
     one.deposit(50);
     System.out.println(one.getBalance());
@@ -22,6 +23,8 @@ public class ManageAccount {
     getTaxes(one);
     getTaxes(two);
     getTaxes(three);
+
+
   }
 
   private static double getBankTotal(Account a, Account b, Account c) {
