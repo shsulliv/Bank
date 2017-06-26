@@ -34,7 +34,10 @@ public class Account {
     }
   }
 
-
+  public void withdraw(double x) {
+    withdraw(x, 0);
+  }
+  
   //-----------------------------------------------------------------
   //  Returns the current balance of the account.
   //-----------------------------------------------------------------
