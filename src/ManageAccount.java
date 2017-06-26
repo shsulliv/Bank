@@ -16,5 +16,11 @@ public class ManageAccount {
     System.out.println(one);
     System.out.println(two);
     System.out.println(three);
+    
+    System.out.println(getBankTotal(one, two, three));
+  }
+
+  private static double getBankTotal(Account a, Account b, Account c) {
+    return a.getBalance() + b.getBalance() + c.getBalance();
   }
 }
