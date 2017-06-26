@@ -16,11 +16,21 @@ public class ManageAccount {
     System.out.println(one);
     System.out.println(two);
     System.out.println(three);
-    
+
     System.out.println(getBankTotal(one, two, three));
+
+    getTaxes(one);
+    getTaxes(two);
+    getTaxes(three);
   }
 
   private static double getBankTotal(Account a, Account b, Account c) {
     return a.getBalance() + b.getBalance() + c.getBalance();
+  }
+
+  private static double getTaxes(Account account) {
+    double taxes = account.getBalance() * 0.15;
+    account.withdraw(taxes);
+    return taxes;
   }
 }
