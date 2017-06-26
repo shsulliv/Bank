@@ -1,9 +1,11 @@
 import java.text.NumberFormat;
+import java.util.Date;
 
 public class Account {
   int acctNumber;
   double balance;
   String name;
+  Date dateCreated;
 
   //-----------------------------------------------------------------
   //  Sets up the account by defining its owner's name, account
@@ -13,6 +15,7 @@ public class Account {
     name = x;
     acctNumber = y;
     balance = z;
+    dateCreated = new Date();
   }
 
   public Account(String x, int y) {
