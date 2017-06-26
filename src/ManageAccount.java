@@ -21,6 +21,11 @@ public class ManageAccount {
     System.out.println(getBankTotal(one, two, three));
 
     inland.deposit(getTaxes(one) + getTaxes(two) + getTaxes(three));
+    
+    one.addInterest(0.015);
+    two.addInterest(0.015);
+    three.addInterest(0.015);
+    inland.addInterest(0.015);
   }
 
   private static double getBankTotal(Account a, Account b, Account c) {

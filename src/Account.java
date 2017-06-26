@@ -50,6 +50,13 @@ public class Account {
   }
 
   //-----------------------------------------------------------------
+  //  Adds the interest to the balance
+  //-----------------------------------------------------------------
+  public void addInterest(double rate) {
+    balance += (balance * rate);
+  }
+
+  //-----------------------------------------------------------------
   //  Returns a one-line description of the account as a string.
   //-----------------------------------------------------------------
   public String toString() {
