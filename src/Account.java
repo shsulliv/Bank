@@ -27,7 +27,11 @@ public class Account {
   //  the fee.
   //-----------------------------------------------------------------
   public void withdraw(double x, double fee) {
-    balance = balance - x - fee;
+    if (x + fee > balance) {
+      System.out.println("There are insufficient funds in your account.");
+    } else {
+      balance = balance - x - fee;
+    }
   }
 
 
