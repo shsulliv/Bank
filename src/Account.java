@@ -6,6 +6,7 @@ public class Account {
   double balance;
   String name;
   Date dateCreated;
+  double overdraftLimit;
 
   //-----------------------------------------------------------------
   //  Sets up the account by defining its owner's name, account
@@ -34,7 +35,7 @@ public class Account {
   //  the fee.
   //-----------------------------------------------------------------
   public void withdraw(double x, double fee) {
-    if (x + fee > balance) {
+    if (x + fee > balance + overdraftLimit) {
       System.out.println("There are insufficient funds in your account.");
     } else {
       balance = balance - x - fee;
@@ -57,6 +58,13 @@ public class Account {
   //-----------------------------------------------------------------
   public void addInterest(double rate) {
     balance += (balance * rate);
+  }
+
+  //-----------------------------------------------------------------
+  //  Sets an overdraft limit
+  //-----------------------------------------------------------------
+  public void setOverdraftLimit(double overdraftLimit) {
+    this.overdraftLimit = overdraftLimit;
   }
 
   //-----------------------------------------------------------------
